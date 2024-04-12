@@ -1,0 +1,38 @@
+https://www.phind.com/search?cache=nyo6winxaif5xp144qz5qbsv
+
+
+
+my-turbo-project/
+├── apps/
+│   ├── client/  (TypeScript, Vite, React)
+│   │   └── ... (your React application code)
+│   └── server/  (Node, TypeScript, Postgres)
+│       └── ... (your Node.js server code)
+├── packages/
+│   └── shared/  (TypeScript interfaces)
+│       └── ... (your shared types)
+├── turbo.json  (Turborepo configuration)
+└── ...         (other project files)
+
+npm install
+npx turbo run dev
+npx turbo run build
+
+npx turbo run build --filter=./packages/shared
+npx turbo run dev --filter=./apps/server
+npx turbo run start --scope=server
+
+npx turbo run build --scope=server
+
+INSTALLING PACKAGES FOR ONE WORKSPACE:
+npm install <package> --workspace=<workspace>
+npm install --save-dev @types/pg --workspace=server
+
+
+STEPS:
+1. root --> npm init -y
+2. apps/ server client (npm create vite)
+3. root --> workpaces : ['apps/*']
+4. root --> npm i turbo -D
+
+
