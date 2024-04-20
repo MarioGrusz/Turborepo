@@ -5,6 +5,10 @@ import { Page, ElementHandle } from "puppeteer";
 
 
 
+//update this part and add link queque link collctor and processor
+
+
+
 
 const getTomaCoffeeProductData = async(): Promise<ProductData[]> => {
     const { browser, page } = await launchBrowserAndNewPage();
