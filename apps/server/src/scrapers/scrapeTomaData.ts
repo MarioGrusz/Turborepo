@@ -6,6 +6,7 @@ import { Page, ElementHandle } from "puppeteer";
 
 
 //update this part and add link queque link collctor and processor
+//to make my scraping engine more generic and scalable
 
 
 
